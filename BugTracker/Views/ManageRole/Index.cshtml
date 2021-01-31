@@ -1,0 +1,80 @@
+﻿@using BOL;
+@{
+    ViewBag.Title = "Index";
+    // ViewBag.Title1 = "Index";
+    Layout = "~/Views/Shared/sideBar.cshtml";
+
+}
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bug Tracker </title>
+    
+    <link rel="stylesheet" href="~/Style/Style4.css" />
+</head>
+<body>
+
+
+
+
+    <div id="parent">
+        <div id="left">
+
+            <h3>Manage User Role</h3>
+            <a href="~/Tickets2.aspx" role="button" class="btn btn-success btn-large">Manage</a>
+
+            <h3>Select Role To Assign</h3>
+            <a href="~/Users.aspx" role="button" class="btn btn-success btn-large">Users</a>
+
+            <h3>Assigned Personell</h3>
+            <a href="~/Tester.aspx" role="button" class="btn btn-success btn-large">Testers</a>
+        </div>
+        <div id="right">
+
+            <h3>Available of Managers</h3>
+
+            <ol>
+                @{
+                     //@flower.Title
+                     List <Manager> managers = (List<Manager>)this.ViewData["managers"];
+                    foreach (Manager manager in managers)
+                    {
+                        <table> <tr><td><a href="/managerole/Details/@manager.Id">@manager.MName</a></td></tr> </table>
+
+
+                        //   <a href="/managerole/Details/@manager.Id">@manager.MName</a>
+
+                    }
+                }
+
+            </ol>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="container" align="left" width="40%">
+
+
+
+
+
+
+    </div>
+
+    <br />
+    <div class="container" align="right" width="50%">
+
+
+
+
+    </div>
+    </body>
+</html>

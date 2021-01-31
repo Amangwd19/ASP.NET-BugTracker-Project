@@ -1,0 +1,23 @@
+﻿body {
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#parent {
+    display: flex;
+    justify-content: space-around;
+}
+
+#left {
+    border: 1px solid lightgray;
+    background-color: lightcyan;
+    width: 40%;
+}
+
+#right {
+    border: 1px solid lightgray;
+    background-color: lightcyan;
+    width: 40%;
+}
